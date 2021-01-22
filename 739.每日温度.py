@@ -20,12 +20,10 @@ class Solution(object):
                     days[top_index] = index - top_index
                 else:
                     stack.append((top_index, top_temp))
-                    stack.append((index, temp))
                     break
             stack.append((index, temp))
         return days
 
-      
 # @lc code=end
 
 """
@@ -39,4 +37,5 @@ if __name__ == "__main__":
     T = [89,62,70,58,47,47,46,76,100,70]
     days = solution.dailyTemperatures(T)
     print(days)
+    assert [8, 1, 5, 4, 3, 2, 1, 1, 0, 0] == days
 """
